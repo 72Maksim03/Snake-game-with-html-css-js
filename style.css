@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.score{
+    color: rgb(108, 112, 107);
+    font-size: 2vw;
+}
+
+.game.started .score{
+    color: rgb(82, 205, 50);
+}
+
+.game.paused .score{
+    color: rgb(233, 158, 6);
+}
+
+.game.stopped .score{
+    color: rgb(233, 6, 6);
+}
+
+.board{
+    width: 38vw;
+    height: 38vw;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: rgb(200, 200, 200) 1px solid;;
+}
+
+.game.started .board{
+    border: rgb(82, 205, 50) 1px solid;
+}
+.game.paused .board{
+    border:rgb(233, 158, 6) 1px solid;
+}
+.game.stopped .board{
+    border:rgb(233, 6, 6) 1px solid;
+}
+
+.board .cell{
+    border: rgb(247, 247, 247) 1px solid;
+}
+
+.board .cell.snake{
+    background-color: green;
+}
+
+.board .cell.food{
+    background-color: red;
+}
+
+.buttons button{
+    padding: 0.4vw 0.8vw;
+    margin: 0 0.2vw;
+    background: none;
+    border: 1px solid;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buttons .start{
+    border: rgb(82, 205, 50) 1px solid;
+    color: rgb(82, 205, 50);
+}
+
+.buttons .pause{
+    border:rgb(233, 158, 6) 1px solid;
+    color:rgb(233, 158, 6);
+}
+
+.buttons .stop{
+    border:rgb(233, 6, 6) 1px solid;
+    color:rgb(233, 6, 6);
+}
+
+.buttons button:hover{
+    opacity: 0.5;
+}
+
+.final-score{
+    width: 38vw;
+    height: 38vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 28px;
+    color: rgb(233, 6, 6);
+}
